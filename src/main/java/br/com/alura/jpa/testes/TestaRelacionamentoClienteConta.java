@@ -14,8 +14,8 @@ public class TestaRelacionamentoClienteConta {
         conta.setId(2L);
 
         Cliente cliente = new Cliente();
-        cliente.setNome("Leonardo");
-        cliente.setEndereco("Rua do ouvidor, 50");
+        cliente.setNome("John Doe");
+        cliente.setEndereco("Rua do Rosário, 890");
         cliente.setProfissao("Professor");
         cliente.setConta(conta);
 
