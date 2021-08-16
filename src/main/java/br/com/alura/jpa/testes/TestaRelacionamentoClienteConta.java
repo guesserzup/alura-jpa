@@ -11,11 +11,11 @@ public class TestaRelacionamentoClienteConta {
     public static void main(String[] args) {
 
         Conta conta = new Conta();
-        conta.setId(2L);
+        conta.setId(1L);
 
         Cliente cliente = new Cliente();
-        cliente.setNome("John Doe");
-        cliente.setEndereco("Rua do Rosário, 890");
+        cliente.setNome("Leonardo");
+        cliente.setEndereco("Rua do Rosário, 80");
         cliente.setProfissao("Professor");
         cliente.setConta(conta);
 
