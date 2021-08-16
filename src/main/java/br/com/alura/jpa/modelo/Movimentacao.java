@@ -10,13 +10,23 @@ public class Movimentacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private BigDecimal valor;
 
     @Enumerated(EnumType.STRING)
     private TipoMovimentacao tipoMovimentacao;
-
     private LocalDateTime data;
     private String descricao;
+    private BigDecimal valor;
+
+    @ManyToOne
+    private Conta conta;
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
 
     public Long getId() {
         return id;
