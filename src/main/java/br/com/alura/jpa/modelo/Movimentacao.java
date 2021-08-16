@@ -71,4 +71,12 @@ public class Movimentacao {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public List<Categoria> getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(List<Categoria> categorias) {
+        this.categorias = categorias;
+    }
 }
