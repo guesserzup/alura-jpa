@@ -1,5 +1,6 @@
 package br.com.alura.jpa.testes;
 
+import br.com.alura.jpa.modelo.Conta;
 import br.com.alura.jpa.modelo.Movimentacao;
 
 import javax.persistence.EntityManager;
@@ -11,12 +12,16 @@ import java.util.List;
 public class TesteJPQL {
     public static void main(String[] args) {
 
-        String jpql = "select m from Movimentacao m where m.conta.id = 1";
-
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("contas");
         EntityManager em = emf.createEntityManager();
 
+        Conta conta = new Conta();
+        conta.setId(1L);
+
+        String jpql = "select m from Movimentacao m where m.conta.id = :pConta";
         Query query = em.createQuery(jpql);
+        query.setParameter("pConta", conta.getId());
+
         List<Movimentacao> resultList = query.getResultList();
 
         for (Movimentacao movimentacao : resultList) {
