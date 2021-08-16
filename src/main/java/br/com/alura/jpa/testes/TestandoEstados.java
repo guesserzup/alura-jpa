@@ -30,5 +30,4 @@ public class TestandoEstados {
 		
 		em.getTransaction().commit();
 	}
-
 }
